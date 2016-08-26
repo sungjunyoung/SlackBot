@@ -11,7 +11,7 @@ BOT_ID = 'U256Y0F16'
 EXAMPLE_COMMAND = "안녕".decode('utf-8')
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient('xoxb-73236015040-AELwS38w3ad9QZFT1U3gaaRz')
+slack_client = SlackClient('xoxb-73236015040-USYPJGD9qtAQycDkLOftP1ts')
 
 def handle_command(command, channel):
     response = "못알아먹겟다 쀼ㅃ쀼삐".decode('utf-8')
@@ -33,7 +33,7 @@ def parse_slack_output(slack_rtm_output):
 
         for output in output_list:
             print output
-            if output and 'text' in output and output['user'] != 'U256Y0F16':
+            if output and 'text' in output and output['user'] != BOT_ID:
                 # return text after the @ mention, whitespace removed
                 return output['text'], output['channel']
     return None, None

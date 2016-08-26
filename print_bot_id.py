@@ -3,7 +3,7 @@ from slackclient import SlackClient
 
 BOT_NAME =  'bbubbibot'
 
-slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
+slack_client = SlackClient('xoxb-73236015040-USYPJGD9qtAQycDkLOftP1ts')
 
 if __name__ == "__main__":
     api_call = slack_client.api_call("users.list")
