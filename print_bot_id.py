@@ -1,9 +1,9 @@
 import os
 from slackclient import SlackClient
 
-BOT_NAME =  'bbubbibot'
+BOT_NAME ='bbubbibot'
 
-slack_client = SlackClient('xoxb-73236015040-USYPJGD9qtAQycDkLOftP1ts')
+slack_client = SlackClient('xoxb-73236015040-QqdL4SZs6USPaMoHLAHJDrui')
 
 if __name__ == "__main__":
     api_call = slack_client.api_call("users.list")

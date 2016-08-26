@@ -6,12 +6,12 @@ from slackclient import SlackClient
 
 
 # starterbot's ID as an environment variable
-BOT_ID = 'U256Y0F16'
+BOT_ID = os.environ.get("BOT_ID")
 
 EXAMPLE_COMMAND = "안녕".decode('utf-8')
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient('xoxb-73236015040-USYPJGD9qtAQycDkLOftP1ts')
+slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
 def handle_command(command, channel):
     response = "못알아먹겟다 쀼ㅃ쀼삐".decode('utf-8')
