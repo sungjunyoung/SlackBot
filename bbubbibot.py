@@ -8,7 +8,7 @@ from slackclient import SlackClient
 # starterbot's ID as an environment variable
 BOT_ID = 'U256Y0F16'
 
-EXAMPLE_COMMAND = "야임마".decode('utf-8')
+EXAMPLE_COMMAND = "안녕".decode('utf-8')
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient('xoxb-73236015040-AELwS38w3ad9QZFT1U3gaaRz')
@@ -16,7 +16,7 @@ slack_client = SlackClient('xoxb-73236015040-AELwS38w3ad9QZFT1U3gaaRz')
 def handle_command(command, channel):
     response = "못알아먹겟다 쀼ㅃ쀼삐".decode('utf-8')
     if command.startswith(EXAMPLE_COMMAND):
-        response = "쀼삐쀼쀼쀼삐".decode('utf-8')
+        response = "쀼삐쀼쀼쀼삐안녕안녕하이하이".decode('utf-8')
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 
